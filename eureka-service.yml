@@ -1,0 +1,14 @@
+# Indique que c'est un serveur Eureka
+#eureka.client.register-with-eureka=false
+#eureka.client.fetch-registry=false
+# Port par défaut pour le serveur Eureka
+#server.port=8761
+#spring.application.name=eureka-service
+spring:
+  config:
+    import: optional:configserver:http://localhost:8888
+  application:
+    name: discovery
+debug: true
+
+
